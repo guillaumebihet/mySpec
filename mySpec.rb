@@ -1,3 +1,9 @@
+class MySpec
+  def self.describe(description)
+    yield
+  end
+end
+
 class ExpectationTarget
   def initialize(output)
     @output = output
@@ -18,4 +24,8 @@ end
 
 def eq(expected_output)
   expected_output
+end
+
+def it(description)
+  yield
 end
